@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(one\ piece\ GIF\ -\ Find\ &\ Share\ on\ GIPHY.gif);
+    background-size: cover;
+}
+#quiz-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+   
+    
+}
