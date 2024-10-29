@@ -9,7 +9,121 @@ let score = 0
 
 // Sélection des éléments HTML
 const questionText = document.getElementById("question-text")
-const optionContainer = document.getElementById("option-container")
+const optionContainer = document.getElementById("options-container")
 const nextButton = document.getElementById("next-button")
 const replayButton = document.getElementById("replay-button")
 const resultElement = document.getElementById("result")
+
+// Fonction pour afficher une question 
+function loadQuestion() {
+    // On vide le conteneur des options
+    optionContainer.textContent = ""
+
+    // Récupère la question actuelle
+    const currentQuestion = quiz_one_piece.questions[currentQuestionIndex]
+
+    // Insert la question dans le HTML
+    questionText.textContent = currentQuestion.text
+
+    // Insert les options dans le HTML
+    currentQuestion.options.forEach((option, index) => {
+        const button = document.createElement("button")
+        button.textContent = `${index + 1}. ${option}`
+        button.setAttribute("data-option-text", option)
+        button.classList.add("option-button")
+        button.addEventListener("click", () => checkAnswer(button, option))
+        optionContainer.appendChild(button)
+    });
+    resultElement.textContent = ""
+    nextButton.disabled = true;
+}
+
+// Fonction pour vérifier la réponse
+function checkAnswer(button, selectedOption) {
+    const currentQuestion = quiz_one_piece.questions[currentQuestionIndex]
+    const correctAnswer = currentQuestion.correct_answer
+
+    // Désactiver tout les boutons après le choix
+    const allButtons = document.querySelectorAll(".option-button")
+    allButtons.forEach(btn => {
+        btn.disabled = true; // Désactive tout les boutons après sélection
+    })
+
+    // Vérifier si la réponse est correcte ou non
+    if (selectedOption.trim() === correctAnswer.trim()) {
+        button.classList.add("correct-answer")
+        score++
+    }
+    else {
+        button.classList.add("wrong-answer")
+
+        // Affiche aussi la bonne réponse
+        allButtons.forEach(btn => {
+            if (btn.getAttribute("data-option-text").trim() === correctAnswer.trim()) {
+                btn.classList.add("correct-answer") // Affiche une bordure pour la bonne réponse
+            }
+        })
+    }
+
+    // Affiche le bouton "Suivant" après avoir cliqué sur une réponse
+    nextButton.disabled = false;
+}
+
+// Ajout d'un écouteur d'événement
+
+nextButton.addEventListener("click", () => {
+    // Incrémenter l'index de la question
+    currentQuestionIndex++
+
+    // Vérifier s'il reste des questions
+    if (currentQuestionIndex < quiz_one_piece.questions.length) {
+        // Affiche la question suivante 
+        loadQuestion()
+    }
+    else {
+        showFinalResult()
+    }
+})
+
+// Fonction affichant un message de fin lors du résultat
+function showFinalResult() {
+    questionText.textContent = `Tu as obtenu ${score}/${quiz_one_piece.questions.length}`
+
+    let message = ""
+
+    // Message personnalisé en fonction du score
+    if (score === quiz_one_piece.questions.length) {
+        message = "Excellent ! Mais tu es encore loin du One Pieces ! 💀"
+    }
+    else if (score >= quiz_one_piece.questions.length / 2) {
+        message = "Bien joué ! Mais tu vaux mieux que ça 👍"
+    }
+    else {
+        message = "Mange un fruit du Dragon et revient me voir, tu n'as pas le niveaux."
+    }
+
+    // Afficher le message final 
+    optionContainer.textContent = ""
+    // Vider les options
+    resultElement.textContent = message // Affiche le message personnalisé
+
+    nextButton.style.display = "none" // Cache le bouton "Suivant"
+    replayButton.style.display = "inline-block" // Affiche le bouton "Veut-tu recommencer l'aventure ?"
+}
+
+// Fonction pour réinitialiser le quiz
+replayButton.addEventListener("click", () => {
+    // Réinisalise l'index et le score
+    currentQuestionIndex = 0
+    score = 0
+
+    // Cache le bouton "Veut-tu recommencer l'aventure" et affiche le bouton "Suivant"
+    replayButton.style.display = "none"
+    nextButton.style.display = "inline-block"
+
+    // Recharge la première question
+    loadQuestion()
+})
+
+// Charge la première question au chargement de la page
+loadQuestion()

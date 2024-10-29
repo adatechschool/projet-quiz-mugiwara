@@ -102,5 +102,3 @@ export const quiz_one_piece = {
         },
     ]
 }
-
-console.log(projet_quiz_mugiwara.questions)
