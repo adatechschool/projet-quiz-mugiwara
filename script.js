@@ -13,6 +13,7 @@ const optionContainer = document.getElementById("options-container")
 const nextButton = document.getElementById("next-button")
 const replayButton = document.getElementById("replay-button")
 const resultElement = document.getElementById("result")
+const progressBar = document.getElementById("progress-bar")
 
 // Fonction pour afficher une question 
 function loadQuestion() {
@@ -36,6 +37,28 @@ function loadQuestion() {
     });
     resultElement.textContent = ""
     nextButton.disabled = true;
+
+    //mise à jour de la barre de progression 
+    updateProgressBar()
+}
+
+//fonction pour la barre de progression avec un dégradé rouge à vert 
+function updateProgressBar(){
+    const progressBarPercentage = ((currentQuestionIndex + 1)/ quiz_one_piece.questions.length)* 100;
+    progressBar.style.width = `${progressBarPercentage}%`
+
+    const redValue = Math.max(255 - Math.floor((progressBarPercentage/100)*255), 0)
+    const greenValue = Math.min(Math.floor((progressBarPercentage / 100) * 255), 255);
+
+    progressBar.style.background = `rgb(${redValue}, ${greenValue}, 0)`
+
+
+    if (currentQuestionIndex + 1 === quiz_one_piece.questions.length){
+        progressBar.classList.remove("progress-red");
+        progressBar.classList.add("progresss-green");
+    } else{
+        progressBar.classList.add("progress-red");
+    }
 }
 
 // Fonction pour vérifier la réponse
@@ -88,7 +111,7 @@ nextButton.addEventListener("click", () => {
 // Fonction affichant un message de fin lors du résultat
 function showFinalResult() {
     questionText.textContent = `Tu as obtenu ${score}/${quiz_one_piece.questions.length}`
-
+    updateProgressBar()
     let message = ""
 
     // Message personnalisé en fonction du score
