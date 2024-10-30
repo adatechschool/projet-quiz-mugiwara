@@ -8,7 +8,20 @@ body {
     height: 100vh; /* Assure que l'arrière-plan couvre toute la hauteur de l'écran */
 }
 
+.progress-bar-container{
+    background-color: ;
+    border-radius: ;
+    width: ;
+    height: ;
+    margin: ;
+}
 
+#progress-bar{
+    background-color: ;
+    border-radius: ;
+    width: ;
+    transition: width 0.3 ease;
+}
 /* Petits écrans (smartphones) */
 @media (max-width: 600px) {
     body {
