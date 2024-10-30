@@ -47,6 +47,11 @@ function updateProgressBar(){
     const progressBarPercentage = ((currentQuestionIndex + 1)/ quiz_one_piece.questions.length)* 100;
     progressBar.style.width = `${progressBarPercentage}%`
 
+    // Positionner le bateau à la fin de la barre
+    const boat = document.getElementById("boat");
+    boat.style.left = `${progressBarPercentage}%`;
+
+    // Dégradé de couleur de rouge à vert pour la barre
     const redValue = Math.max(255 - Math.floor((progressBarPercentage/100)*255), 0)
     const greenValue = Math.min(Math.floor((progressBarPercentage / 100) * 255), 255);
 
