@@ -1,7 +1,7 @@
 export const quiz_one_piece = {
     questions : [
         {
-            text : "Quel est le trésor que recherche Luffy dans *One Piece* ?",
+            text : "Quel est le trésor que recherche Luffy dans 'One Piece' ?",
             options : [
                 "La Perle des Mers",
                 "L'Émeraude Sacrée",
@@ -33,7 +33,7 @@ export const quiz_one_piece = {
         {
             text : "Quelle est la mer principale où se déroule l’aventure de Luffy ?",
             options : [
-                "La Grande Line",
+                "Grande Line",
                 "La Route des Titans",
                 "L'Océan Sans Fin",
                 "La Mer de l'Ouest",
@@ -41,7 +41,7 @@ export const quiz_one_piece = {
             correct_answer : "La Grande Line"
         },
         {
-            text : "Qui est l'auteur de *One Piece* ?",
+            text : "Qui est l'auteur de 'One Piece' ?",
             options : [
                 "Eiichiro Oda",
                 "Masashi Kishimoto",
@@ -81,7 +81,7 @@ export const quiz_one_piece = {
             correct_answer : "Par accident quand il était jeune"
         },
         {
-            text : "Comment s’appelle le navire de Luffy et son équipage ?",
+            text : "Comment s’appelle le navire actuel de Luffy et son équipage ?",
             options : [
                 "L'Aurore des Mers",
                 "Le Thousand Sunny",
