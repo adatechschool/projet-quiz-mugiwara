@@ -1,0 +1,158 @@
+/* Style global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Police par défaut */
+    background-color: #f0f8ff; /* Couleur de fond claire */
+    color: #333; /* Couleur de texte sombre pour une bonne lisibilité */
+}
+
+/* Style pour l'en-tête */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav img {
+    height: 60px; /* Ajuste la taille du logo */
+}
+
+nav div a {
+    color: #ffd700; /* Couleur dorée pour les liens */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav div a:hover {
+    color: #ffdd44; /* Couleur au survol */
+}
+
+/* Style pour la section d'introduction */
+.acceuil-introduction {
+    text-align: center;
+    padding: 50px;
+    background: url('img/image-acceuil/luffy-background.jpg') no-repeat center center/cover; /* Image de fond */
+    position: relative;
+}
+
+.acceuil-introduction::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Couverture sombre pour le texte */
+}
+
+.acceuil-introduction h1 {
+    color: #ffd700; /* Titre doré */
+    font-size: 3em;
+    margin: 0;
+}
+
+.acceuil-introduction p {
+    color: #ffdead; /* Couleur de texte pour le paragraphe */
+    font-size: 1.2em;
+    margin: 20px 0;
+    max-width: 600px;
+    margin: 20px auto; /* Centrer le texte */
+}
+
+/* Style pour le bloc de quiz */
+.quiz-normal {
+    position: relative;
+    width: 80%; /* Réduit la largeur pour laisser de l'espace autour */
+    max-width: 500px;
+    margin: 20px auto; /* Centre le bloc */
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background-image: url('img/image-acceuil/image-quiz-normal.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5); /* Assombrit l'image de fond */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-normal:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Styles pour le texte du quiz */
+.quiz-normal h2 {
+    font-family: 'Cinzel', serif; /* Nouvelle police élégante et lisible */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffd700; /* Couleur dorée */
+}
+
+.quiz-normal p {
+    font-family: 'Roboto', sans-serif; /* Police complémentaire pour le texte */
+    font-size: 1em;
+    color: #ffdead;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Style du bouton pour accéder au quiz */
+.play-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    background-color: #ffd700;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #ffdd44;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-normal:active {
+    transform: scale(0.98);
+}
+
+/* Style pour le pied de page */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-social a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ffdd44; /* Couleur au survol */
+}

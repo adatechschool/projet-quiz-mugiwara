@@ -10,14 +10,15 @@ body {
 }
 
 #quiz-container {
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
     font-family: Papyrus, fantasy;
     font-size: 40px;
     font-weight: 400;
-    color:  #0d09ff;
+    color: #0d09ff; /* Couleur de texte bien visible */
     padding: 20px;
     width: 80%;
     max-width: 600px;
-    background-image: url(img/one\ piece\ GIF\ -\ Find\ &\ Share\ on\ GIPHY.gif);
+    background-image: url(../img/one\ piece\ GIF\ -\ Find\ &\ Share\ on\ GIPHY.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -25,15 +26,34 @@ body {
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    filter: brightness(0.80); /* Réduit la luminosité de l'image de fond */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#question-text {
-    filter: brightness(1.80);
+/* Pseudo-élément pour l'assombrissement */
+#quiz-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Ajustez l'opacité pour l'effet d'assombrissement */
+    border-radius: 15px;
+    z-index: 1;
 }
+
+/* Place le contenu du conteneur au-dessus de l'assombrissement */
+#quiz-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+#question-text {
+    filter: brightness(1.8);
+}
+
 
 /* Style du conteneur pour chaque option */
 #options-container {
@@ -56,6 +76,40 @@ body {
     background-color: rgba(244, 211, 94, 0.8); /* Couleur dorée au survol */
 }
 
+.progress-bar-container{
+    background: color #00bfff;;
+    border-radius:10px ;
+    width:100% ;
+    height:20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background-image: url('img/boat-animate-bar-progress.gif'); /* Chemin vers votre image d'eau animée */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir la barre */
+    width: 0%; /* La largeur sera mise à jour par JavaScript */
+    transition: width 0.3s ease; /* Transition pour l'animation de largeur */
+}
+
+#boat {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    height: 50px;
+    transform: translateX(-50%);
+    transition: left 0.3s ease;
+}
+
+#progress-bar{
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
 
 
 
@@ -65,7 +119,7 @@ body {
 /* Petits écrans (smartphones) */
 @media (max-width: 600px) {
     body {
-        background-image: url(img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
+        background-image: url(../img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -76,7 +130,7 @@ body {
 /* Tablettes et écrans moyens */
 @media (min-width: 601px) and (max-width: 1024px) {
     body {
-        background-image: url(img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
+        background-image: url(../img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -87,7 +141,7 @@ body {
 /* Grands écrans (ordinateurs de bureau) */
 @media (min-width: 1025px) {
     body {
-        background-image: url(img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
+        background-image: url(../img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
