@@ -7,6 +7,27 @@ body {
     justify-content: center;
     height: 100vh; /* Hauteur de la page entière */
     background-color: #f0f0f0;
+    flex-direction: column; /* Colonne pour placer le titre en haut */
+    align-items: center;
+}
+
+
+
+/* Style pour la balise h1 dans le thème One Piece */
+h1 {
+    font-family: 'Pirata One', cursive; /* Police style pirate, à remplacer par une police personnalisée si nécessaire */
+    color: #d4a017; /* Couleur dorée */
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour effet de profondeur */
+    padding: 10px;
+    border: 2px solid #d4a017;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 255, 0.2); /* Fond légèrement bleuté pour effet océan */
+    width: 80%; /* Ajuste la largeur pour laisser de l'espace autour */
+    margin: 20px auto 0 auto; /* Centre le titre horizontalement */
 }
 
 #quiz-container {
@@ -50,10 +71,32 @@ body {
     z-index: 2;
 }
 
+.option-button {
+    font-family: 'Pirata One', cursive;
+    font-size: 0.4em;
+    color: #fff;
+    background-color: #1d3557; /* Fond bleu foncé pour les options */
+    border: 2px solid #d4a017; /* Bordure dorée */
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol pour les boutons */
+.option-button:hover {
+    background-color: #457b9d; /* Couleur plus claire au survol */
+    transform: scale(1.05);
+}
+
+
 #question-text {
     filter: brightness(1.8);
 }
 
+#next-button {
+    font-size: 1em;
+    font-family: 'Pirata One', cursive;
+}
 
 /* Style du conteneur pour chaque option */
 #options-container {
@@ -111,7 +154,19 @@ body {
 }
 
 
-
+.correct-answer {
+    outline: 5px solid #6fcf97;
+}
+  
+.wrong-answer {
+    outline: 5px solid #eb5757;
+}
+  
+#result {
+    text-align: center; 
+    margin-top: 20px;
+    color: #2c5364;
+}
 
 
 

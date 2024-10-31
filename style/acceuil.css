@@ -2,50 +2,54 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif; /* Police par défaut */
-    background-color: #f0f8ff; /* Couleur de fond claire */
-    color: #333; /* Couleur de texte sombre pour une bonne lisibilité */
+    font-family: 'Roboto', sans-serif;
+    background: url('../img/670e613b2e053317b4914d71a6dcf9cd.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; /* Couleur de texte claire pour une bonne lisibilité */
 }
 
-/* Style pour l'en-tête */
-header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-nav img {
-    height: 60px; /* Ajuste la taille du logo */
-}
-
-nav div a {
-    color: #ffd700; /* Couleur dorée pour les liens */
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav div a:hover {
-    color: #ffdd44; /* Couleur au survol */
+/* Ajout d'un overlay sombre sur le body */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Assombrit l'arrière-plan */
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* Style pour la section d'introduction */
 .acceuil-introduction {
-    text-align: center;
-    padding: 50px;
-    background: url('img/image-acceuil/luffy-background.jpg') no-repeat center center/cover; /* Image de fond */
     position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3); /* Opacité réduite pour un aspect moins flashy */
+    border-radius: 12px;
+    text-align: center;
+    color: #ffdead; /* Couleur de texte inspirée du thème pirate */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre légère */
 }
 
+/* Autres styles pour le texte et le titre */
+.acceuil-introduction h1 {
+    color: #ffd700; /* Couleur du titre */
+    font-size: 2.8em;
+    margin: 0 0 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.acceuil-introduction p {
+    color: #ffdead; /* Couleur du texte */
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+/* Ajout d'un overlay sombre sur la section d'introduction */
 .acceuil-introduction::after {
     content: '';
     position: absolute;
@@ -53,22 +57,35 @@ nav div a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Couverture sombre pour le texte */
+    background: rgba(0, 0, 0, 0.3); /* Opacité réduite pour un aspect moins flashy */
 }
 
-.acceuil-introduction h1 {
-    color: #ffd700; /* Titre doré */
-    font-size: 3em;
-    margin: 0;
+/* Style pour le header avec effet hover */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    transition: background 0.3s ease;
 }
 
-.acceuil-introduction p {
-    color: #ffdead; /* Couleur de texte pour le paragraphe */
+/* Style pour les liens de navigation avec effet de survol */
+nav div a {
+    color: #ffd700; /* Couleur dorée pour les liens */
+    text-decoration: none;
+    margin: 0 15px;
     font-size: 1.2em;
-    margin: 20px 0;
-    max-width: 600px;
-    margin: 20px auto; /* Centrer le texte */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+nav div a:hover {
+    color: #ffdd44; /* Couleur au survol */
+    transform: scale(1.1);
+}
+
+/* Ajout d'une ombre portée pour un effet 3D au survol */
+nav div a:hover {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ffd700; /* Ombre portée pour un effet lumineux */
+}
+
 
 /* Style pour le bloc de quiz */
 .quiz-normal {
@@ -87,26 +104,24 @@ nav div a:hover {
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition */
 }
 
+/* Effet de survol */
 .quiz-normal:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05); /* Agrandissement léger */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée */
 }
 
-/* Styles pour le texte du quiz */
 .quiz-normal h2 {
-    font-family: 'Cinzel', serif; /* Nouvelle police élégante et lisible */
-    font-size: 1.8em;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
     margin-bottom: 10px;
     color: #ffd700; /* Couleur dorée */
 }
 
 .quiz-normal p {
-    font-family: 'Roboto', sans-serif; /* Police complémentaire pour le texte */
-    font-size: 1em;
-    color: #ffdead;
+    font-size: 1.1em;
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -118,7 +133,7 @@ nav div a:hover {
     font-size: 1em;
     font-weight: bold;
     color: #333;
-    background-color: #ffd700;
+    background-color: #ffd700; /* Jaune pirate */
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -126,12 +141,8 @@ nav div a:hover {
 }
 
 .play-button:hover {
-    background-color: #ffdd44;
+    background-color: #ffdd44; /* Jaune plus clair au survol */
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
-}
-
-.quiz-normal:active {
-    transform: scale(0.98);
 }
 
 /* Style pour le pied de page */

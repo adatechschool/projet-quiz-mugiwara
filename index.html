@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/style.css" rel="stylesheet">
     <link href="progressBar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
     <title>Quiz One Piece</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <img src="img/image-acceuil/logo_ada.png" alt="logo_ada" class="logo">
+            <div>
+                <a href="acceuil.html">Acceuil</a>
+                <a href="index.html">Quiz Normal</a>
+                <a href="difficile.html">Quiz Difficile</a>
+                <a href="extreme.html">Quiz Extrême</a>
+            </div>
+        </nav>
+    </header>
+    
+    <h1>Difficulté Normal :</h1>
     <div id ="quiz-container">
         <div class ="question" id = "question-text"></div>
 
@@ -25,6 +39,7 @@
         <button id="next-button" disabled ="">Suivant</button>
         <button id="replay-button" style="display: none">Veut-tu recommencer l'aventure ?</button>
     </div>
+    
     <script type="module" src="script/script.js"></script>
     
 </body>
