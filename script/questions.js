@@ -33,7 +33,7 @@ export const quiz_one_piece = {
         {
             text : "Quelle est la mer principale où se déroule l’aventure de Luffy ?",
             options : [
-                "Grande Line",
+                "La Grande Line",
                 "La Route des Titans",
                 "L'Océan Sans Fin",
                 "La Mer de l'Ouest",

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/difficile.css" rel="stylesheet">
+    <link href="progressBar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <title>Quiz One Piece</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/image-acceuil/logo_ada.png" alt="logo_ada" class="logo">
+            <div>
+                <a href="acceuil.html">Acceuil</a>
+                <a href="index.html">Quiz Normal</a>
+                <a href="difficile.html">Quiz Difficile</a>
+                <a href="extreme.html">Quiz Extrême</a>
+            </div>
+        </nav>
+    </header>
+
+    <h1 class="page-title">Difficulté Difficile :</h1>
+
+    <main>
+    <div id ="quiz-container">
+        <div class ="question" id = "question-text"></div>
+
+        <!-- Ajout du nombre de tentative restantes-->
+        <div id="attempts-remaining" style="font-size: 1.2em; margin-top: 10px;">Tentatives restantes : 3</div>
+
+        <div class="progress-bar-container">
+            <div id="progress-bar">
+                <img id="boat" src="img/boat-animate-bar-progress.gif" alt="bateau"/>
+            </div>
+        </div>
+
+        <div class= "options" id = "options-container"></div>
+    
+    <div id="result"></div>
+
+    <div class="button-container">
+        <button id="next-button" disabled ="">Suivant</button>
+        <button id="replay-button" style="display: none">Veut-tu recommencer l'aventure ?</button>
+    </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Quiz One Piece. Tous droits réservés.</p>
+            <p>Créé par Hugo Munoz, Roddick Mahoungou, Ange</p>
+            <div class="footer-links">
+                <a href="mailto:hugomunoz0903@gmail.com">Contact Hugo</a> |
+                <a href="mailto:roddick.mahoungou@example.com">Contact Roddick</a> |
+                <a href="mailto:ange@example.com">Contact Ange</a>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://x.com/Voetiii_" target="_blank">Twitter/Hugo</a>
+            <a href="https://x.com/___rdk" target="_blank">Twitter/Roddick</a>
+        </div>
+    </footer>
+
+    <script type="module" src="script/niv-difficile.js"></script>
+    
+</body>
+</html>

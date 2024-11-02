@@ -62,9 +62,18 @@ body::before {
 
 /* Style pour le header avec effet hover */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    position: fixed; /* Rendre le header fixe */
+    top: 0; /* Positionné en haut de la page */
+    left: 0; /* Aligner à gauche */
+    width: 100%; /* Prendre toute la largeur */
+    background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
     padding: 10px 0;
-    transition: background 0.3s ease;
+    z-index: 1000; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+    transition: background 0.3s ease; /* Transition pour un effet doux */
+}
+
+main {
+    margin-top: 70px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
 }
 
 /* Style pour les liens de navigation avec effet de survol */
@@ -144,6 +153,46 @@ nav div a:hover {
     background-color: #ffdd44; /* Jaune plus clair au survol */
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
+
+/* Style pour le bloc de quiz difficile */
+.quiz-difficile {
+    position: relative;
+    width: 80%; /* Réduit la largeur pour laisser de l'espace autour */
+    max-width: 500px;
+    margin: 20px auto; /* Centre le bloc */
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background-image: url('img/image-acceuil/image-quiz-difficile.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5); /* Assombrit l'image de fond */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition */
+}
+
+/* Effet de survol pour le quiz difficile */
+.quiz-difficile:hover {
+    transform: scale(1.05); /* Agrandissement léger */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée */
+}
+
+.quiz-difficile h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffd700; /* Couleur dorée */
+}
+
+.quiz-difficile p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
 
 /* Style pour le pied de page */
 footer {
