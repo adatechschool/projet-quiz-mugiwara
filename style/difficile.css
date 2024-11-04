@@ -66,6 +66,7 @@ main {
     max-width: 800px;
 }
 
+
 /* Centre le conteneur du quiz au milieu de la page */
 body {
     background-image: url(../img/zoro.gif);
@@ -96,6 +97,10 @@ h1 {
     border-radius: 8px;
     background-color: rgba(0, 0, 255, 0.2); /* Fond légèrement bleuté pour effet océan */
     width: 80%; /* Ajuste la largeur pour laisser de l'espace autour */
+    left: -14%;
+    position: relative;
+    
+    
 }
 
 /* Conteneur du quiz */
@@ -369,11 +374,13 @@ footer {
     h1 {
         font-size: 3rem;
         width: 80%;
+        left: -9%;
     }
     #quiz-container {
         font-size: 1.5rem;
         width: 80%;
     }
+    
 }
 
 /* Responsive adjustments */
