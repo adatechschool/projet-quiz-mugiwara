@@ -101,7 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    left: -15%;
+    left: -19%;
 }
 
 
@@ -119,6 +119,8 @@ h1 {
     background-color: rgba(0, 0, 255, 0.2);
     width: 80%;
     margin: 20px 0; /* Centré en haut et bas du conteneur */
+    left: -14%;
+    position: relative;
     
 }
 
@@ -373,6 +375,7 @@ footer {
     h1 {
         font-size: 3rem;
         width: 80%;
+        left: -9%;
     }
     #quiz-container {
         font-size: 1.5rem;
