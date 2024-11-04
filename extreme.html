@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/extrême.css" rel="stylesheet">
-    <link href="progressBar.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
     <title>Quiz One Piece</title>
 </head>
@@ -35,6 +34,17 @@
     <h1 class="page-title">Difficulté Extrême :</h1>
 
     <main>
+    <div id="alert-message" class="alert" style="display: none;">
+        Attention, une fois le quiz lancé, vous avez <span class="highlight">60s</span>. Bonne chance Pirate !
+        <button id="close-alert">X</button>
+    </div>
+
+    <div id="start-container" style="display: none;">
+        <button id="start-button">Commence le Quiz</button>
+    </div>
+
+    <div id="timer" style="font-size: 1.5em; display: none;">Temps restant : <span id="time">60</span>s</div>
+
     <div id ="quiz-container">
         <div class ="question" id = "question-text"></div>
 
@@ -43,7 +53,7 @@
 
         <div class="progress-bar-container">
             <div id="progress-bar">
-                <img id="boat" src="img/boat-animate-bar-progress.gif" alt="bateau"/>
+                <img id="boat" src="img/boat-animate.gif" alt="bateau"/>
             </div>
         </div>
 
