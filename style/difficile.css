@@ -1,18 +1,34 @@
 /* Style pour le header en menu latéral fixe */
-header {
+/* Style pour le menu déroulant */
+#side-menu {
     position: fixed;
     top: 0;
-    left: -30px; /* Décalage vers la gauche */
-    width: 220px; /* Réduit la largeur du header */
+    left: -250px; /* Cache le menu en dehors de l'écran */
+    width: 220px; /* Largeur du menu */
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Fond sombre plus opaque */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1000; /* Pour qu'il reste au-dessus du contenu */
-    transition: all 0.3s ease;
+    z-index: 1000;
+    transition: left 0.3s ease; /* Transition pour l'animation d'affichage */
 }
+
+/* Affiche le menu quand il est ouvert */
+#side-menu.open {
+    left: 0; /* Position visible du menu */
+}
+
+/* Style pour le bouton de menu */
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
 
 header nav {
     display: flex;
@@ -21,7 +37,7 @@ header nav {
 }
 
 header .logo {
-    width: 150px;
+    width: 115px;
     margin-bottom: 30px;
 }
 

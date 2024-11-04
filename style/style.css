@@ -1,17 +1,32 @@
-/* Style pour le header en menu latéral fixe */
-header {
+
+/* Style pour le menu déroulant */
+#side-menu {
     position: fixed;
     top: 0;
-    left: -30px; /* Décalage vers la gauche */
-    width: 220px; /* Réduit la largeur du header */
+    left: -250px; /* Cache le menu en dehors de l'écran */
+    width: 220px; /* Largeur du menu */
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1000; /* Pour qu'il reste au-dessus du contenu */
-    transition: all 0.3s ease;
+    z-index: 1000;
+    transition: left 0.3s ease; /* Transition pour l'animation d'affichage */
+}
+
+/* Affiche le menu quand il est ouvert */
+#side-menu.open {
+    left: 0; /* Position visible du menu */
+}
+
+/* Style pour le bouton de menu */
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1100;
 }
 
 header nav {
@@ -21,7 +36,7 @@ header nav {
 }
 
 header .logo {
-    width: 150px;
+    width: 115px;
     margin-bottom: 30px;
 }
 
@@ -51,52 +66,30 @@ main {
     margin: 0 auto;
 }
 
-/* Centre le conteneur du quiz au milieu de la page */
+/* Centrer le conteneur principal du quiz et le titre au centre de la page */
 body {
     background-image: url(../img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
     background-size: cover;
-    background-position: center; /* Centre l'image de fond */
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-left: 200px; /* Réduit la marge pour le centrer */
-    margin-bottom: 70px;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
-
-
-/* Style pour la balise h1 dans le thème One Piece */
-h1 {
-    margin: 20px auto; /* Centre le titre horizontalement */
-    font-family: 'Pirata One', cursive; /* Police style pirate, à remplacer par une police personnalisée si nécessaire */
-    color: #d4a017; /* Couleur dorée */
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour effet de profondeur */
-    padding: 10px;
-    border: 2px solid #d4a017;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 255, 0.2); /* Fond légèrement bleuté pour effet océan */
-    width: 80%; /* Ajuste la largeur pour laisser de l'espace autour */
-    margin: 20px auto 0 auto; /* Centre le titre horizontalement */
-}
-
+/* Ajustement du style de #quiz-container */
 #quiz-container {
-    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+    position: relative;
     font-family: Papyrus, fantasy;
-    font-size: 1.7rem; /* Augmente la taille de la police */
+    font-size: 1.7rem;
     font-weight: 400;
-    color: #0d09ff; /* Couleur de texte bien visible */
-    padding: 30px; /* Augmente le padding */
+    color: #0d09ff;
+    padding: 60px;
     width: 90%;
-    max-width: 700px; /* Largeur max pour le quiz */
-    margin: 0 auto; /* Centre horizontalement */
-    margin-bottom: 60px; /* Espace au-dessus du footer */
+    max-width: 700px;
     background-image: url(../img/one\ piece\ GIF\ -\ Find\ &\ Share\ on\ GIPHY.gif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,9 +101,27 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto; /* Centre le conteneur */
-    padding: 30px; /* Augmente le padding */
+    left: -15%;
 }
+
+
+/* Ajustement du style de h1 pour le centrer */
+h1 {
+    font-family: 'Pirata One', cursive;
+    color: #d4a017;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border: 2px solid #d4a017;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 255, 0.2);
+    width: 80%;
+    margin: 20px 0; /* Centré en haut et bas du conteneur */
+    
+}
+
 
 /* Pseudo-élément pour l'assombrissement */
 #quiz-container::before {

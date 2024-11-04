@@ -161,3 +161,11 @@ replayButton.addEventListener("click", () => {
 
 // Charge la première question au chargement de la page
 loadQuestion();
+
+const menuToggle = document.getElementById('menu-toggle');
+const sideMenu = document.getElementById('side-menu');
+
+// Ajouter un écouteur d'événement pour basculer la classe "open" sur le menu
+menuToggle.addEventListener('click', function () {
+    sideMenu.classList.toggle('open');
+});
