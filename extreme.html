@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/extrême.css" rel="stylesheet">
+    <link href="progressBar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <title>Quiz One Piece</title>
+</head>
+<body>
+    <div id="menu-toggle">
+        <img width="50" height="50" src="https://img.icons8.com/nolan/64/menu.png" alt="menu"/>
+    </div>
+    
+    <header id="side-menu">
+        <nav>
+            <img src="img/image-acceuil/logo_ada.png" alt="logo_ada" class="logo">
+            <div>
+                <a href="acceuil.html">
+                    <img width="50" height="50" src="https://img.icons8.com/nolan/64/home-page.png" alt="Home Page"/>
+                </a>                
+                <a href="index.html">
+                    <img width="50" height="50" src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/external-Demo-miscellany-texts-and-badges-bearicons-gradient-bearicons.png" alt="Demo"/>
+                </a>
+                <a href="difficile.html">
+                    <img width="50" height="50" src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/external-Easy-miscellany-texts-and-badges-bearicons-gradient-bearicons.png" alt="Easy"/>
+                </a>
+                <a href="extreme.html">
+                    <img width="50" height="50" src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/external-Platinum-miscellany-texts-and-badges-bearicons-gradient-bearicons.png" alt="Platinum"/>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <h1 class="page-title">Difficulté Extrême :</h1>
+
+    <main>
+    <div id ="quiz-container">
+        <div class ="question" id = "question-text"></div>
+
+        <!-- Ajout du nombre de tentative restantes-->
+        <div id="attempts-remaining" style="font-size: 1.2em; margin-top: 10px;">Tentatives restantes : 3</div>
+
+        <div class="progress-bar-container">
+            <div id="progress-bar">
+                <img id="boat" src="img/boat-animate-bar-progress.gif" alt="bateau"/>
+            </div>
+        </div>
+
+        <div class= "options" id = "options-container"></div>
+    
+    <div id="result"></div>
+
+    <div class="button-container">
+        <button id="next-button" disabled ="">Suivant</button>
+        <button id="replay-button" style="display: none">Veut-tu recommencer l'aventure ?</button>
+    </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Quiz One Piece. Tous droits réservés.</p>
+            <p>Créé par Hugo Munoz, Roddick Mahoungou, Ange Nono</p>
+            <div class="footer-links">
+                <a href="mailto:hugomunoz0903@gmail.com">Contact Hugo</a> |
+                <a href="mailto:mahoungouroddick@gmail.com">Contact Roddick</a> |
+                <a href="mailto:angenono.pro@gmail.com">Contact Ange</a>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://x.com/Voetiii_" target="_blank">Twitter/Hugo</a>
+            <a href="https://x.com/___rdk" target="_blank">Twitter/Roddick</a>
+            <a href="https://www.instagram.com/_black.soft/profilecard/?igsh=ZHhrbDh2bmRlaG1x" target="_blank">Insta/Ange</a>
+        </div>
+    </footer>
+
+    <script type="module" src="script/extrême.js"></script>
+    
+</body>
+</html>

@@ -157,7 +157,7 @@ export const quiz_one_piece = {
             text : "Qui est le capitaine de la Marine chargé de traquer Luffy au début de l'histoire ?",
             options : [
                 "Capitaine Tashigi.",
-                "Le capitaine Smoker.",
+                "Le capitaine Smoker",
                 "Amiral Akainu.",
                 "Capitaine Aokiji.",
             ],
@@ -202,6 +202,109 @@ export const quiz_one_piece = {
                 "Renverser le Gouvernement Mondial.",
             ],
             correct_answer : "Renverser le Gouvernement Mondial."
+        },
+    ],
+
+    questionsModeExtreme : [
+        {
+            text : "Dans quel chapitre Luffy utilise-t-il le Gear Second pour la première fois  ?",
+            options : [
+                "Chapitre 342",
+                "Chapitre 387",
+                "Chapitre 370",
+                "Chapitre 352",
+            ],
+            correct_answer : "Chapitre 387"
+        },
+        {
+            text : "Quelle est la prime exacte de Monkey D. Luffy après la défaite de Doflamingo à Dressrosa ?",
+            options : [
+                "400 millions de berrys",
+                "500 millions de berrys",
+                "600 millions de berrys",
+                "1 milliard de berrys",
+            ],
+            correct_answer : "500 millions de berrys"
+        },
+        {
+            text : "Quel est le nom du père de Portgas D. Ace ?",
+            options : [
+                "Gol D. Roger",
+                "Edward Newgate",
+                "Silvers Rayleigh",
+                "Monkey D. Dragon",
+            ],
+            correct_answer : "Gol D.Roger"
+        },
+        {
+            text : "Combien de membres actuels du Gouvernement Mondial existe-t-il ?",
+            options : [
+                "20",
+                "50",
+                "20 royaumes fondateurs, mais 19 aujourd'hui",
+                "19 royaumes fondateurs",
+            ],
+            correct_answer : "20 royaumes fondateurs, mais 19 aujourd'hui"
+        },
+        {
+            text : "Dans quel épisode rencontre-t-on pour la première fois le personnage Sabo (en flashback)",
+            options : [
+                "Episode 501",
+                "Episode 504",
+                "Episode 488",
+                "Episode 467",
+            ],
+            correct_answer : "Episode 504"
+        },
+        {
+            text : "Combien d'îles différentes le Thousand Sunny a-t-il visitées sur le chemin vers le Nouveau Monde avant d'atteindre l'île des Hommes-Poissons ?",
+            options : [
+                "2",
+                "4",
+                "3",
+                "5",
+            ],
+            correct_answer : "2 (l'archipel Sabaody et l'île des Hommes-Poissons)"
+        },
+        {
+            text : "Dans quel chapitre apprend-on le nom complet de Gol D. Roger ?",
+            options : [
+                "Chapitre 574",
+                "Chapitre 550",
+                "Chapitre 563",
+                "Chapitre 600",
+            ],
+            correct_answer : "Chapitre 574"
+        },
+        {
+            text : "Quel est le vrai nom de Barbe Blanche ?",
+            options : [
+                "Edward Newgate",
+                "Marshall D. Teach",
+                "Edward Teach",
+                "Rocks D. Xebec",
+            ],
+            correct_answer : "Edward Newgate"
+        },
+        {
+            text : "Quel fruit du démon possède Charlotte Katakuri ?",
+            options : [
+                "Mera Mera no Mi",
+                "Mochi Mochi no Mi",
+                "Ito Ito no Mi",
+                "Hie Hie no Mi",
+            ],
+            correct_answer : "Mochi Mochi no Mi"
+        },
+        {
+            text : " Quel est le nom du premier capitaine des Pirates de Barbe Blanche ?",
+            options : [
+                "Rocks D. Xebec",
+                "Marco le Phénix",
+                "Edward Newgate",
+                "Kozuki Oden",
+            ],
+            correct_answer : "Marco le Phénix"
         },
     ]
 }
