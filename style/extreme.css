@@ -131,10 +131,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 .page-title {
-    margin-top: 20px; /* Ajustez cette valeur selon vos besoins */
+    margin-top: 60px; /* Ajustez cette valeur selon vos besoins */
     text-align: center; /* Centre le texte */
     font-size: 2.5rem; /* Taille de la police, ajustez si nécessaire */
     color: #d4a017; /* Couleur dorée pour correspondre au thème */
@@ -384,6 +386,38 @@ body {
     background-color: #e67e22; /* Couleur légèrement plus foncée au survol */
     transform: scale(1.05); /* Légère augmentation de la taille au survol */
 }
+
+/* Animation sur les liens */
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff9900;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff9900; /* Change la couleur du lien */
+}
+
+a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
 
 /* Footer */
 footer {
