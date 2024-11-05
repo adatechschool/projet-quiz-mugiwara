@@ -1,4 +1,4 @@
-
+/* Style pour le header en menu latéral fixe */
 /* Style pour le menu déroulant */
 #side-menu {
     position: fixed;
@@ -99,7 +99,7 @@ h1 {
     width: 80%; /* Ajuste la largeur pour laisser de l'espace autour */
     left: -14%;
     position: relative;
-    
+
     
 }
 
@@ -115,7 +115,7 @@ h1 {
     max-width: 700px; /* Largeur max pour le quiz */
     margin: 0 auto; /* Centre horizontalement */
     margin-bottom: 60px; /* Espace au-dessus du footer */
-    background-image: url(../img/zoro.gif);
+    background-image: url(../img/one-piece-roronoa-zoro--980x551.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -267,47 +267,7 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Ajoute une ombre au focus */
 }
 
-/* Style général pour le footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.85); /* Fond sombre semi-transparent */
-    color: #ffd700; /* Texte doré */
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 900;
-    padding-bottom: 30px;
-}
 
-.footer-content {
-    margin-bottom: 10px;
-}
-
-.footer-content p {
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: #ffd700;
-}
-
-.footer-links a,
-.footer-social a {
-    color: #ffd700;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover,
-.footer-social a:hover {
-    color: #ffdd44; /* Couleur dorée plus claire au survol */
-    text-shadow: 0 0 5px #fff, 0 0 10px #ffd700;
-}
-
-.footer-social {
-    margin-top: 10px;
-}
 
 /* Petits écrans (smartphones) */
 @media (max-width: 600px) {

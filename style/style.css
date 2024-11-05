@@ -90,7 +90,7 @@ body {
     padding: 60px;
     width: 90%;
     max-width: 700px;
-    background-image: url(../img/one\ piece\ GIF\ -\ Find\ &\ Share\ on\ GIPHY.gif);
+    background-image: url(../img/luffyboom.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -267,47 +267,7 @@ h1 {
 }
 
 
-/* Style général pour le footer */
-footer {
-    background-color: rgba(0, 0, 0, 0.85); /* Fond sombre semi-transparent */
-    color: #ffd700; /* Texte doré */
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 900;
-    padding-bottom: 30px;
-}
 
-.footer-content {
-    margin-bottom: 10px;
-}
-
-.footer-content p {
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: #ffd700;
-}
-
-.footer-links a,
-.footer-social a {
-    color: #ffd700;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover,
-.footer-social a:hover {
-    color: #ffdd44; /* Couleur dorée plus claire au survol */
-    text-shadow: 0 0 5px #fff, 0 0 10px #ffd700;
-}
-
-.footer-social {
-    margin-top: 10px;
-}
 
 
 /* Petits écrans (smartphones) */
@@ -375,7 +335,7 @@ footer {
     h1 {
         font-size: 3rem;
         width: 80%;
-        left: -9%;
+        left: -11%;
     }
     #quiz-container {
         font-size: 1.5rem;
@@ -383,17 +343,4 @@ footer {
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    body {
-        margin-bottom: 120px;
-    }
-    footer {
-        padding: 15px;
-    }
-    .footer-content p,
-    .footer-links a,
-    .footer-social a {
-        font-size: 0.8em;
-    }
-}
+
