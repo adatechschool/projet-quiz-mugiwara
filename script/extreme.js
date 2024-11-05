@@ -16,6 +16,7 @@ const replayButton = document.getElementById("replay-button")
 const resultElement = document.getElementById("result")
 const progressBar = document.getElementById("progress-bar")
 const startButton = document.getElementById("start-button")
+const attemptsClear = document.getElementById("attempts-remaining")
 const timerElement = document.getElementById("timer")
 const quizContainer = document.getElementById("quiz-container")
 
@@ -65,7 +66,7 @@ function showStartButton() {
 // Appelez cette fonction lorsque la page se charge ou au bon moment
 window.onload = function() {
     showStartButton() // Affiche le bouton au chargement de la page
-};
+}
 
 // Fonction du Timer
 function startTimer() {
@@ -108,7 +109,7 @@ function loadQuestion() {
         button.classList.add("option-button")
         button.addEventListener("click", () => checkAnswer(button, option))
         optionContainer.appendChild(button)
-    });
+    })
     resultElement.textContent = ""
     nextButton.disabled = true;
 
@@ -162,7 +163,7 @@ function checkAnswer(button, selectedOption) {
             if (btn.getAttribute("data-option-text").trim() === correctAnswer.trim()) {
                 btn.classList.add("correct-answer") // Affiche une bordure pour la bonne réponse
             }
-        });
+        })
 
         // Si la réponse est incorrecte, décrémente le nombre de tentatives restantes
         attemptsLeft--
@@ -176,7 +177,8 @@ function checkAnswer(button, selectedOption) {
         clearInterval(timer) // arrêt du Timer
         showFinalResult()
     }
-    document.getElementById("attempts-remaining").textContent = "Tentatives restantes : " + attemptsLeft
+    // Mettre à jour le compteur de tentatives après avoir avancé à la question suivante
+     document.getElementById("attempts-remaining").textContent = `Tentatives restantes : ${attemptsLeft}`
 }
 
 // Fonction pour terminer le quiz lorsque le Timer atteint zéro
@@ -212,8 +214,8 @@ nextButton.addEventListener("click", () => {
     }
 
      // Mettre à jour le compteur de tentatives après avoir avancé à la question suivante
-     document.getElementById("attempts-remaining").textContent = "Tentatives restantes : " + attemptsLeft
-});
+     document.getElementById("attempts-remaining").textContent = `Tentatives restantes : ${attemptsLeft}`
+})
 
 // Fonction affichant un message de fin lors du résultat
 function showFinalResult() {
@@ -235,6 +237,8 @@ function showFinalResult() {
     // Vider les options
     resultElement.textContent = message // Affiche le message personnalisé
 
+    attemptsClear.style.display = "none"
+    optionContainer.style.display = "none"
     nextButton.style.display = "none" // Cache le bouton "Suivant"
     replayButton.style.display = "inline-block" // Affiche le bouton "Veut-tu recommencer l'aventure ?"
 }
@@ -247,6 +251,7 @@ replayButton.addEventListener("click", () => {
     attemptsLeft = 3 // Réinitialise le nombre de tentatives à 3
     timeLeft = 60  // Réinitialise le Timer
 
+    optionContainer.style.display = "grid"
     // Cache le bouton "Veut-tu recommencer l'aventure" et affiche le bouton "Suivant"
     replayButton.style.display = "none"
     nextButton.style.display = "inline-block"
@@ -257,7 +262,10 @@ replayButton.addEventListener("click", () => {
     // Recharge la première question
     loadQuestion()
     startTimer()
-});
+
+    // Mettre à jour le compteur de tentatives après avoir avancé à la question suivante
+     document.getElementById("attempts-remaining").textContent = `Tentatives restantes : ${attemptsLeft}`
+})
 
 // Charge la première question au chargement de la page
 loadQuestion()
@@ -268,4 +276,4 @@ const sideMenu = document.getElementById('side-menu')
 // Ajouter un écouteur d'événement pour basculer la classe "open" sur le menu
 menuToggle.addEventListener('click', function () {
     sideMenu.classList.toggle('open')
-});
+})

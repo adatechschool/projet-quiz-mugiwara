@@ -131,6 +131,7 @@ function showFinalResult() {
     // Cache le bouton "Suivant" et affiche le bouton "Recommencer"
     nextButton.style.display = "none";
     replayButton.style.display = "inline-block";
+    optionContainer.style.display = "none"
 }
 
 // Fonction pour réinitialiser le quiz
@@ -142,6 +143,8 @@ replayButton.addEventListener("click", () => {
     // Cache le bouton "Recommencer" et affiche le bouton "Suivant"
     replayButton.style.display = "none";
     nextButton.style.display = "inline-block";
+
+    optionContainer.style.display = "grid"
 
     // Recharge la première question
     loadQuestion();
