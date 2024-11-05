@@ -264,7 +264,7 @@ export const quiz_one_piece = {
                     "3",
                     "5",
                 ],
-                correct_answer : "2 (l'archipel Sabaody et l'île des Hommes-Poissons)"
+                correct_answer : "2"
             },
             {
                 text : "Dans quel chapitre apprend-on le nom complet de Gol D. Roger ?",
