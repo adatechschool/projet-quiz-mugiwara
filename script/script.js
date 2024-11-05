@@ -77,7 +77,7 @@ function checkAnswer(button, selectedOption) {
     });
 
     // Vérifie si la réponse est correcte ou non
-    if (selectedOption.trim() === correctAnswer.trim()) {
+    if (selectedOption === correctAnswer.trim()) {
         button.classList.add("correct-answer");
         score++;
     } else {
