@@ -229,7 +229,7 @@ export const quiz_one_piece = {
             {
                 text : "Quel est le nom du père de Portgas D. Ace ?",
                 options : [
-                    "Gol D. Roger",
+                    "Gol D.Roger",
                     "Edward Newgate",
                     "Silvers Rayleigh",
                     "Monkey D. Dragon",
