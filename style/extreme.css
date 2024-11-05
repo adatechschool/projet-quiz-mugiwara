@@ -1,0 +1,444 @@
+/* Style pour le menu déroulant */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Cache le menu en dehors de l'écran */
+    width: 220px; /* Largeur du menu */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    transition: left 0.3s ease; /* Transition pour l'animation d'affichage */
+}
+
+/* Affiche le menu quand il est ouvert */
+#side-menu.open {
+    left: 0; /* Position visible du menu */
+}
+
+/* Style pour le bouton de menu */
+#menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    width: 115px;
+    margin-bottom: 30px;
+}
+
+header nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav div a {
+    color: #ffd700; /* Couleur dorée pour les liens */
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav div a:hover {
+    color: #ffdd44; /* Couleur au survol */
+    transform: scale(1.1);
+    text-shadow: 0 0 5px #fff, 0 0 10px #ffd700; /* Effet lumineux */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+}
+
+#start-button {
+    background-color: #ffcc00; /* Couleur de fond jaune */
+    color: #000; /* Couleur du texte noir */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 15px 25px; /* Espacement intérieur (haut/bas, gauche/droite) */
+    font-size: 1.5em; /* Taille de la police */
+    font-family: 'Pirata One', cursive; /* Police personnalisée */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background-color 0.3s, transform 0.3s; /* Transition douce pour les effets */
+}
+
+#start-button:hover {
+    background-color: #e6b800; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Légèrement agrandi au survol */
+}
+
+#start-button:active {
+    transform: scale(0.95); /* Réduit légèrement au clic */
+}
+
+.highlight {
+    font-weight: bold; /* Gras */
+    font-size: 1.5em; /* Taille de police augmentée */
+    color: #ff0000; /* Couleur rouge pour attirer l'attention */
+    background-color: #ffff00; /* Fond jaune pour le faire ressortir */
+    padding: 0.2em 0.4em; /* Espacement intérieur pour le souligner */
+    border-radius: 3px; /* Coins arrondis */
+}
+
+
+
+.alert {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ffcc00; /* Couleur de bordure */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Pirata One', sans-serif; /* Police personnalisée */
+}
+
+.alert button {
+    background: none;
+    border: none;
+    color: #ffcc00;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* Centre le conteneur du quiz au milieu de la page */
+body {
+    background-image: url(../img/40152f0fba1cadd89eb10822ad3d2f1f.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center;
+    height: 100vh;
+    margin-left: 220px; /* Réduit la marge pour le centrer */
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    margin-top: 60px; /* Ajustez cette valeur selon vos besoins */
+    text-align: center; /* Centre le texte */
+    font-size: 2.5rem; /* Taille de la police, ajustez si nécessaire */
+    color: #d4a017; /* Couleur dorée pour correspondre au thème */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour effet de profondeur */
+}
+
+
+/* Style pour le conteneur du timer */
+#timer {
+    font-family: 'Pirata One', cursive; /* Police pirate pour le timer */
+    font-size: 2em; /* Taille de police plus grande pour le timer */
+    color: #ffdd44; /* Couleur dorée */
+    text-align: center; /* Centre le texte */
+    margin: 20px 0; /* Marge au-dessus et en dessous */
+    padding: 10px; /* Espacement interne */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+    border: 2px solid #ffd700; /* Bordure dorée */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombre pour effet de profondeur */
+}
+
+/* Style de la boîte modale */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Reste au même endroit lors du défilement */
+    z-index: 1000; /* Au-dessus du contenu */
+    left: 0;
+    top: 0;
+    width: 100%; /* Prend toute la largeur */
+    height: 100%; /* Prend toute la hauteur */
+    overflow: auto; /* Ajoute un défilement si nécessaire */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background-color: #fefefe; /* Fond blanc */
+    margin: 15% auto; /* Marge centrée */
+    padding: 20px; /* Espacement interne */
+    border: 1px solid #888; /* Bordure grise */
+    width: 80%; /* Largeur */
+    text-align: center; /* Centre le texte */
+}
+
+/* Bouton de fermeture */
+.close-button {
+    color: #aaa; /* Couleur grise */
+    float: right; /* Place à droite */
+    font-size: 28px; /* Taille de police */
+    font-weight: bold; /* Gras */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black; /* Couleur au survol */
+    text-decoration: none; /* Supprime le soulignement */
+    cursor: pointer; /* Curseur pointer au survol */
+}
+
+/* Style pour le bouton "Commencer le quiz" */
+#start-quiz-button {
+    background-color: #d33e18; /* Couleur de fond rouge foncé */
+    color: white; /* Couleur du texte en blanc */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur */
+}
+
+#start-quiz-button:hover {
+    background-color: #ff5733; /* Couleur plus claire au survol */
+}
+
+
+/* Style pour le bouton "Commencer le quiz" */
+#start-quiz-button {
+    font-family: 'Pirata One', cursive; /* Utilise la même police que la page */
+    font-size: 1.5em; /* Taille du texte */
+    color: white; /* Couleur du texte en blanc */
+    background-color: #d33e18; /* Couleur de fond rouge foncé */
+    border: 2px solid #ffd700; /* Bordure dorée */
+    padding: 15px 30px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background-color 0.3s, transform 0.3s; /* Effets de transition */
+    display: block; /* Affichage en bloc pour centrer */
+    margin: 20px auto; /* Marge en haut et en bas, centré horizontalement */
+    text-align: center; /* Centre le texte */
+}
+
+/* Effet au survol pour le bouton */
+#start-quiz-button:hover {
+    background-color: #ff5733; /* Couleur légèrement plus claire au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+
+/* Conteneur du quiz */
+#quiz-container {
+    position: relative;
+    font-family: 'Papyrus', fantasy;
+    font-size: 1.9rem; /* Augmente la taille de la police */
+    font-weight: 400;
+    color: #0d09ff; /* Couleur de texte bien visible */
+    padding: 30px; /* Augmente le padding */
+    width: 90%;
+    max-width: 700px; /* Largeur max pour le quiz */
+    margin: 0 auto; /* Centre horizontalement */
+    margin-bottom: 60px; /* Espace au-dessus du footer */
+    border: 3px solid #d4a017;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/petit1.jpg);
+    background-size: cover;
+}
+
+/* Pseudo-élément pour l'assombrissement */
+#quiz-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajustez l'opacité pour l'effet d'assombrissement */
+    border-radius: 15px;
+    z-index: 1;
+}
+
+/* Place le contenu du conteneur au-dessus de l'assombrissement */
+#quiz-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Boutons d'options */
+.option-button {
+    font-family: 'Pirata One', cursive;
+    font-size: 0.6em;
+    color: #fff;
+    background-color: #1d3557; /* Fond bleu foncé pour les options */
+    border: 2px solid #d4a017; /* Bordure dorée */
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet au survol pour les boutons */
+.option-button:hover {
+    background-color: #457b9d; /* Couleur plus claire au survol */
+    transform: scale(1.05);
+}
+
+/* Style du texte de question */
+#question-text {
+    filter: brightness(1.8);
+}
+
+/* Style du bouton Suivant */
+#next-button {
+    font-size: 1em;
+    font-family: 'Pirata One', cursive;
+}
+
+/* Conteneur pour les options */
+#options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes de taille égale */
+    gap: 15px; /* Espacement entre les options */
+    margin-top: 20px;
+    width: 90%; /* Ajuste la largeur pour ne pas prendre toute la place */
+    padding: 10px;
+    border: 2px solid #d4a017;
+    background-color: rgba(6, 118, 223, 0.7); /* Fond semi-transparent pour contraste */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    align-items: center;
+}
+
+/* Effet au survol des options */
+.option:hover {
+    transform: scale(1.05);
+    background-color: rgba(244, 211, 94, 0.8); /* Couleur dorée au survol */
+}
+
+/* Style de la barre de progression */
+.progress-bar-container {
+    background-color: #00bfff; /* Couleur de fond pour la barre de progression */
+    border-radius: 10px;
+    width: 100%;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background-image: url('img/boat-animate-bar-progress.gif'); /* Chemin vers votre image d'eau animée */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir la barre */
+    width: 0%; /* La largeur sera mise à jour par JavaScript */
+    transition: width 0.3s ease; /* Transition pour l'animation de largeur */
+}
+
+#boat {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    height: 50px;
+    transform: translateX(-50%);
+    transition: left 0.3s ease;
+}
+
+/* Styles pour les réponses */
+.correct-answer {
+    outline: 5px solid #6fcf97; /* Couleur verte pour la bonne réponse */
+}
+
+.wrong-answer {
+    outline: 5px solid #eb5757; /* Couleur rouge pour la mauvaise réponse */
+}
+
+#result {
+    text-align: center; 
+    margin-top: 20px;
+    color: #2c5364; /* Couleur du texte du résultat */
+}
+
+/* Style pour le bouton "Veut-tu recommencer l'aventure ?" */
+#replay-button {
+    background-color: #f39c12; /* Couleur de fond orange */
+    color: white; /* Couleur du texte en blanc */
+    font-family: 'Pirata One', cursive; /* Utilise la même police que votre page */
+    font-size: 1.2em; /* Taille du texte */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background-color 0.3s, transform 0.3s; /* Effets de transition */
+}
+
+/* Effet au survol */
+#replay-button:hover {
+    background-color: #e67e22; /* Couleur légèrement plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+/* Animation sur les liens */
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff9900;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff9900; /* Change la couleur du lien */
+}
+
+a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Pirata One', cursive;
+    font-size: 0.8em; /* Taille de police réduite pour le footer */
+    color: #d4a017; /* Couleur dorée */
+}
+
+.video-container video {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px; 
+    
+}

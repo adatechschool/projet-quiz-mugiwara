@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/extrême.css" rel="stylesheet">
-    <link href="progressBar.css" rel="stylesheet">
+    <link href="style/extreme.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
     <title>Quiz One Piece</title>
 </head>
@@ -32,9 +31,26 @@
             </div>
         </nav>
     </header>
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="video\pinteretdownloader.com-1730800828.916598 (online-video-cutter.com).mp4" type="video/mp4">
+        </video>
+    </div>
     <h1 class="page-title">Difficulté Extrême :</h1>
 
     <main>
+    <div id="alert-message" class="alert" style="display: none;">
+        Attention, une fois le quiz lancé, vous avez <span class="highlight">60s</span>. Bonne chance Pirate !
+        <button id="close-alert">X</button>
+    </div>
+
+    <div id="start-container" style="display: none;">
+        <button id="start-button">Commence le Quiz</button>
+    </div>
+
+    <div id="timer" style="font-size: 1.5em; display: none;">Temps restant : <span id="time">60</span>s</div>
+
+
     <div id ="quiz-container">
         <div class ="question" id = "question-text"></div>
 
@@ -43,7 +59,7 @@
 
         <div class="progress-bar-container">
             <div id="progress-bar">
-                <img id="boat" src="img/boat-animate-bar-progress.gif" alt="bateau"/>
+                <img id="boat" src="img/boat-animate.gif" alt="bateau"/>
             </div>
         </div>
 
@@ -55,7 +71,14 @@
         <button id="next-button" disabled ="">Suivant</button>
         <button id="replay-button" style="display: none">Veut-tu recommencer l'aventure ?</button>
     </div>
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="video\pinterestdownloader.com-1730800828.916598 (online-video-cutter.com).mp4" type="video/mp4">
+        </video>
+    </div>
+
     </main>
+    
 
     <footer>
         <div class="footer-content">
@@ -74,7 +97,7 @@
         </div>
     </footer>
 
-    <script type="module" src="script/extrême.js"></script>
+    <script type="module" src="script/extreme.js"></script>
     
 </body>
 </html>
