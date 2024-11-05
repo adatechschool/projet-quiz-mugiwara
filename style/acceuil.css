@@ -193,6 +193,43 @@ nav div a:hover {
     line-height: 1.5;
 }
 
+.quiz-extrême {
+    position: relative;
+    width: 80%; /* Réduit la largeur pour laisser de l'espace autour */
+    max-width: 500px;
+    margin: 20px auto; /* Centre le bloc */
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background-image: url('img/image-acceuil/image-quiz-normal.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5); /* Assombrit l'image de fond */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout de la transition */
+}
+
+/* Effet de survol */
+.quiz-extrême:hover {
+    transform: scale(1.05); /* Agrandissement léger */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée */
+}
+
+.quiz-extrême h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffd700; /* Couleur dorée */
+}
+
+.quiz-extrême p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
 
 /* Style pour le pied de page */
 footer {
