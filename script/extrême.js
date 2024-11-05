@@ -5,6 +5,8 @@ import { quiz_one_piece } from './questions.js' // Import des questions
 let currentQuestionIndex = 0 // On commence par la première question
 let attemptsLeft = 3 // Nombre de tentatives
 let score = 0 // Score qui commence à 0
+let time = 50
+let timerInterval;
 
 // Sélection des éléments HTML
 const questionText = document.getElementById("question-text")
@@ -13,6 +15,42 @@ const nextButton = document.getElementById("next-button")
 const replayButton = document.getElementById("replay-button")
 const resultElement = document.getElementById("result")
 const progressBar = document.getElementById("progress-bar")
+
+//création div pour le timer
+const timerElement = document.createElement("div")//element pour créer le timer
+timerElement.id = "timer"
+timerElement.style.fontSize = "1.5em"
+timerElement.style.marginTop = "10px" 
+document.body.insertBefore(timerElement,document.getElementById("quiz-container"))
+
+//fonction pour mettre à jour le timer
+function updateTimer(){
+    if (time > 0){
+        time--
+        timerElement.textContent = `temps restant : ${time} secondes`
+    
+    } else {
+        endGameDueToTime()
+    }
+}
+
+function startTimer(){
+    clearInterval(timerInterval)
+    timerInterval = setInterval(updateTimer, 1000)
+}
+
+
+//Fonction pour afficher le message de fin si le temps est écoulé
+function endGameDueToTime(){
+    clearInterval(timerInterval)
+    questionText.textContent = "Le temps est écoulé ! Tu ne mérites pas d'être un fan."
+    optionContainer.textContent =""
+    resultElement.textContent = "Tu n'as pas réussi à terminé le quiz à temps. Réessaie !"
+    nextButton.style.display = "none"
+    replayButton.style.display = "inline-block"
+}
+
+startTimer()
 
 // Fonction pour afficher une question 
 function loadQuestion() {
@@ -144,12 +182,13 @@ function showFinalResult() {
     replayButton.style.display = "inline-block" // Affiche le bouton "Veut-tu recommencer l'aventure ?"
 }
 
-// Fonction pour réinitialiser le quiz
+// Fonction pour réinitialiser le quiz / timer
 replayButton.addEventListener("click", () => {
     // Réinitialise l'index, le score et les tentatives
     currentQuestionIndex = 0
     score = 0
     attemptsLeft = 3 // Réinitialise le nombre de tentatives à 3
+    time = 50
 
     // Cache le bouton "Veut-tu recommencer l'aventure" et affiche le bouton "Suivant"
     replayButton.style.display = "none"
@@ -157,6 +196,7 @@ replayButton.addEventListener("click", () => {
 
     // Recharge la première question
     loadQuestion()
+    startTimer()
 });
 
 // Charge la première question au chargement de la page
