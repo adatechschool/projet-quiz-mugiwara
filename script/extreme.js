@@ -85,11 +85,6 @@ function startTimer() {
     }, 1000)
 }
 
-function showGameOverImage() {
-    document.getElementById('bomb').style.display = 'block'; // Affiche l'image
-}
-
-
 // Fonction pour afficher une question 
 function loadQuestion() {
     // On vide le conteneur des options
@@ -191,6 +186,7 @@ function endQuiz() {
 
     // Masque les options et le timer
     optionContainer.textContent = ""
+    optionContainer.style.display = "none"
     timerElement.style.display = "none"
 
     const explosionSound = new Audio("audio/sf_explosion_01.mp3")
