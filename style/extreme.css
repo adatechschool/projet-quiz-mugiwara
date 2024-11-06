@@ -445,3 +445,108 @@ footer {
     border-radius: 25px; 
     
 }
+
+/* Styles pour différents types d'écrans */
+
+/* Petits écrans (smartphones) */
+@media (max-width: 600px) {
+    header {
+        width: 80%;
+    }    
+    body {
+        background-image: url(../img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-y: auto; /* Permet le défilement global */
+        margin: 0;
+    }
+    h1 {
+        font-size: 1.5rem;
+        width: 90%;
+    }
+    #quiz-container {
+        font-size: 1rem;
+        width: 90%;
+    }
+    .option-button {
+        font-size: 0.9em;
+    }
+}
+
+/* Tablettes et écrans moyens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        width: 220px;
+    }
+    body {
+        background-image: url(../img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-y: auto;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 2.5rem;
+        width: 85%;
+    }
+    #quiz-container {
+        font-size: 1.2rem;
+        width: 85%;
+    }
+}
+
+/* Grands écrans (ordinateurs de bureau) */
+@media (min-width: 1025px) {
+    header {
+        width: 250px;
+    }
+    body {
+        background-image: url(../img/670e613b2e053317b4914d71a6dcf9cd.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-y: auto;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 3rem;
+        width: 80%;
+    }
+    #quiz-container {
+        font-size: 1.5rem;
+        width: 80%;
+    }
+}
+
+/* Styles généraux pour une compatibilité optimale */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Aligne le contenu vers le haut */
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Permet le défilement global si nécessaire */
+}
+
+#quiz-container {
+    max-width: 700px;
+    padding: 20px;
+    margin: auto;
+    overflow: visible; /* Permet au contenu de s’étendre sans défilement interne */
+    min-height: 60vh; /* Assure une taille minimale, adaptable selon le contenu */
+}
+
+.header,
+#timer {
+    text-align: center;
+    margin: 0 auto;
+}
