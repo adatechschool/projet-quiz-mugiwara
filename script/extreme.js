@@ -251,6 +251,7 @@ replayButton.addEventListener("click", () => {
     attemptsLeft = 3 // Réinitialise le nombre de tentatives à 3
     timeLeft = 60  // Réinitialise le Timer
 
+    attemptsClear.style.display = "block"
     optionContainer.style.display = "grid"
     // Cache le bouton "Veut-tu recommencer l'aventure" et affiche le bouton "Suivant"
     replayButton.style.display = "none"

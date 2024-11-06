@@ -109,7 +109,7 @@ h1 {
     font-family: 'Papyrus', fantasy;
     font-size: 1.9rem; /* Augmente la taille de la police */
     font-weight: 400;
-    color: #0d09ff; /* Couleur de texte bien visible */
+    color: #d4a017; /* Couleur de texte bien visible */
     padding: 30px; /* Augmente le padding */
     width: 90%;
     max-width: 700px; /* Largeur max pour le quiz */
@@ -147,6 +147,10 @@ h1 {
 #quiz-container > * {
     position: relative;
     z-index: 2;
+}
+
+div#attempts-remaining {
+    color: white;
 }
 
 /* Boutons d'options */
@@ -238,7 +242,7 @@ h1 {
 #result {
     text-align: center; 
     margin-top: 20px;
-    color: #2c5364; /* Couleur du texte du résultat */
+    color: white; /* Couleur du texte du résultat */
 }
 
 /* Style pour le bouton "Veut-tu recommencer l'aventure ?" */

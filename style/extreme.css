@@ -211,6 +211,10 @@ body {
     transition: background-color 0.3s; /* Transition pour le changement de couleur */
 }
 
+div#attempts-remaining {
+    color: white;
+}
+
 #start-quiz-button:hover {
     background-color: #ff5733; /* Couleur plus claire au survol */
 }
@@ -245,7 +249,7 @@ body {
     font-family: 'Papyrus', fantasy;
     font-size: 1.9rem; /* Augmente la taille de la police */
     font-weight: 400;
-    color: #0d09ff; /* Couleur de texte bien visible */
+    color: #d4a017; /* Couleur de texte bien visible */
     padding: 30px; /* Augmente le padding */
     width: 90%;
     max-width: 700px; /* Largeur max pour le quiz */
@@ -370,7 +374,7 @@ body {
 #result {
     text-align: center; 
     margin-top: 20px;
-    color: #2c5364; /* Couleur du texte du résultat */
+    color: white; /* Couleur du texte du résultat */
 }
 
 /* Style pour le bouton "Veut-tu recommencer l'aventure ?" */

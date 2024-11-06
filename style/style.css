@@ -86,7 +86,7 @@ body {
     font-family: Papyrus, fantasy;
     font-size: 1.7rem;
     font-weight: 400;
-    color: #0d09ff;
+    color: #d4a017;
     padding: 60px;
     width: 90%;
     max-width: 700px;
@@ -237,7 +237,7 @@ h1 {
 #result {
     text-align: center; 
     margin-top: 20px;
-    color: #2c5364;
+    color: white;
 }
 
 /* Style pour le bouton "Veut-tu recommencer l'aventure ?" */
