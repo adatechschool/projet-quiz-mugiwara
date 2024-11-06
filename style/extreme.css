@@ -2,7 +2,7 @@
 #side-menu {
     position: fixed;
     top: 0;
-    left: -250px; /* Cache le menu en dehors de l'écran */
+    left: -262px; /* Cache le menu en dehors de l'écran */
     width: 220px; /* Largeur du menu */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
