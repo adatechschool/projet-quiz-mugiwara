@@ -23,7 +23,7 @@ const quizContainer = document.getElementById("quiz-container")
 // Fonction pour désactiver les éléments du quiz
 function disabledQuizElements() {
     questionText.textContent = ""
-    optionContainer.innerHTML = "" // Vider le conteneur d'options
+    optionContainer.textContent = "" // Vider le conteneur d'options
     nextButton.disabled = true
     replayButton.style.display = "none" // Masquer le bouton de replay
     timerElement.style.display = "none" // Masquer le timer
